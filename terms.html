@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Smart Typist</title>
+    <meta name="description"
+        content="Terms of Service for Smart Typist - AI-Powered Android Keyboard. Read the terms governing your use of our app and services.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⌨️</text></svg>">
+
+    <style>
+        /* Legal Page Specific Styles */
+        .legal-hero {
+            padding: 160px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .legal-hero-bg {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 80% 50%, rgba(108, 92, 231, 0.12) 0%, transparent 60%),
+                radial-gradient(circle at 20% 30%, rgba(0, 206, 201, 0.08) 0%, transparent 50%);
+        }
+
+        .legal-hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(108, 92, 231, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(108, 92, 231, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .legal-hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .legal-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 9999px;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .legal-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .legal-meta {
+            font-size: 0.875rem;
+            color: var(--text-tertiary);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .legal-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Table of Contents */
+        .toc-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .toc-title {
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            margin-bottom: 1rem;
+        }
+
+        .toc-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 0.5rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-list li a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            padding: 6px 8px;
+            border-radius: 0.5rem;
+            transition: all 0.15s ease;
+        }
+
+        .toc-list li a:hover {
+            background: var(--bg-tertiary);
+            color: var(--primary);
+        }
+
+        .toc-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            background: var(--gradient-primary);
+            color: white;
+            font-size: 0.6875rem;
+            font-weight: 700;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* Legal Content */
+        .legal-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding-bottom: 5rem;
+        }
+
+        .legal-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 2rem;
+            scroll-margin-top: 100px;
+            backdrop-filter: blur(10px);
+            transition: border-color 0.3s ease;
+        }
+
+        .legal-section:hover {
+            border-color: var(--border-hover);
+        }
+
+        .legal-section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .legal-section-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background: var(--gradient-card);
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .legal-section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .legal-section-num {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .legal-text {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .legal-text:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-list {
+            list-style: none;
+            padding: 0;
+            margin: 0.75rem 0 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .legal-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .legal-list li::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: var(--primary);
+            border-radius: 50%;
+            margin-top: 8px;
+            flex-shrink: 0;
+        }
+
+        .legal-highlight {
+            background: linear-gradient(135deg, rgba(108, 92, 231, 0.08) 0%, rgba(0, 206, 201, 0.08) 100%);
+            border: 1px solid rgba(108, 92, 231, 0.2);
+            border-radius: 0.75rem;
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .legal-highlight strong {
+            color: var(--primary);
+        }
+
+        .legal-highlight.warning {
+            background: linear-gradient(135deg, rgba(253, 121, 168, 0.08) 0%, rgba(231, 113, 113, 0.08) 100%);
+            border-color: rgba(253, 121, 168, 0.25);
+        }
+
+        .legal-highlight.warning strong {
+            color: #fd79a8;
+        }
+
+        .legal-subheading {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 1.25rem 0 0.5rem;
+        }
+
+        /* Plan Comparison */
+        .plan-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .plan-card-small {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            padding: 1rem;
+        }
+
+        .plan-card-small h4 {
+            font-size: 0.9375rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .plan-card-small ul {
+            list-style: none;
+            padding: 0;
+            font-size: 0.8125rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Contact Card */
+        .contact-card {
+            background: var(--gradient-card);
+            border: 1px solid rgba(108, 92, 231, 0.25);
+            border-radius: 1rem;
+            padding: 1.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-card-text h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-card-text p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .contact-card-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--primary);
+            color: white;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: all 0.15s ease;
+        }
+
+        .contact-card-email:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        /* Back to Home */
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            transition: color 0.15s ease;
+        }
+
+        .back-home:hover {
+            color: var(--primary);
+        }
+
+        /* Other Legal Links */
+        .other-legal {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .other-legal p {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+        }
+
+        .other-legal a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: opacity 0.15s ease;
+        }
+
+        .other-legal a:hover {
+            opacity: 0.8;
+        }
+    </style>
+
+    <!-- Config - MUST load before scripts -->
+    <script src="config.js"></script>
+</head>
+
+<body>
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <span class="theme-icon-dark">🌙</span>
+        <span class="theme-icon-light">☀️</span>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">⌨️</span>
+                <span class="logo-text">Smart Typist</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html#features" class="nav-link">Features</a></li>
+                <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+                <li><a href="index.html#download" class="nav-link nav-cta">Download</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="legal-hero">
+        <div class="legal-hero-bg"></div>
+        <div class="legal-hero-grid"></div>
+        <div class="container legal-hero-content">
+            <a href="index.html" class="back-home">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 5l-7 7 7 7" />
+                </svg>
+                Back to Home
+            </a>
+            <div class="legal-badge">
+                <span>📄</span>
+                <span>Legal Document</span>
+            </div>
+            <h1 class="legal-title">Terms of <span class="gradient-text">Service</span></h1>
+            <div class="legal-meta">
+                <div class="legal-meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                        <line x1="16" y1="2" x2="16" y2="6" />
+                        <line x1="8" y1="2" x2="8" y2="6" />
+                        <line x1="3" y1="10" x2="21" y2="10" />
+                    </svg>
+                    <span>Last Updated: March 2, 2026</span>
+                </div>
+                <div class="legal-meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    <span>Effective: March 2, 2026</span>
+                </div>
+                <div class="legal-meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <span>Governed by: Indian Law</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+
+            <!-- Table of Contents -->
+            <div class="toc-card">
+                <p class="toc-title">📋 Table of Contents</p>
+                <ul class="toc-list">
+                    <li><a href="#acceptance"><span class="toc-num">1</span> Acceptance of Terms</a></li>
+                    <li><a href="#description"><span class="toc-num">2</span> Description of Service</a></li>
+                    <li><a href="#user-accounts"><span class="toc-num">3</span> User Accounts & Registration</a></li>
+                    <li><a href="#subscriptions"><span class="toc-num">4</span> Subscriptions & Billing</a></li>
+                    <li><a href="#acceptable-use"><span class="toc-num">5</span> Acceptable Use Policy</a></li>
+                    <li><a href="#intellectual-property"><span class="toc-num">6</span> Intellectual Property</a></li>
+                    <li><a href="#ai-disclaimer"><span class="toc-num">7</span> AI Features Disclaimer</a></li>
+                    <li><a href="#termination"><span class="toc-num">8</span> Termination</a></li>
+                    <li><a href="#disclaimers"><span class="toc-num">9</span> Warranties & Disclaimers</a></li>
+                    <li><a href="#limitation"><span class="toc-num">10</span> Limitation of Liability</a></li>
+                    <li><a href="#governing-law"><span class="toc-num">11</span> Governing Law</a></li>
+                    <li><a href="#contact-terms"><span class="toc-num">12</span> Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Introduction Highlight -->
+            <div class="legal-highlight" style="margin-bottom: 2rem;">
+                <strong>Please read these Terms carefully.</strong> By downloading, installing, or using Smart Typist,
+                you agree to be bound by these Terms of Service. If you do not agree, please do not use the app.
+            </div>
+
+            <!-- Sections -->
+            <div class="legal-layout">
+
+                <!-- Section 1: Acceptance -->
+                <div class="legal-section" id="acceptance">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">✅</div>
+                        <div>
+                            <div class="legal-section-num">Section 1</div>
+                            <h2 class="legal-section-title">Acceptance of Terms</h2>
+                        </div>
+                    </div>
+                    <p class="legal-text">By accessing or using Smart Typist (the "App"), its website, or any associated
+                        services (collectively, the "Service"), you agree to be legally bound by these Terms of Service
+                        ("Terms") and our <a href="privacy-policy.html" style="color: var(--primary);">Privacy
+                            Policy</a>.</p>
+                    <p class="legal-text">These Terms apply to:</p>
+                    <ul class="legal-list">
+                        <li>All users of the Smart Typist Android app</li>
+                        <li>Visitors to our website (smarttypist.app)</li>
+                        <li>Subscribers to any paid plans (Monthly or Yearly)</li>
+                        <li>Users who download our APK directly from our website</li>
+                    </ul>
+                    <p class="legal-text">If you are using Smart Typist on behalf of an organization, you represent that
+                        you have the authority to bind that organization to these Terms.</p>
+                </div>
+
+                <!-- Section 2: Description of Service -->
+                <div class="legal-section" id="description">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">⌨️</div>
+                        <div>
+                            <div class="legal-section-num">Section 2</div>
+                            <h2 class="legal-section-title">Description of Service</h2>
+                        </div>
+                    </div>
+                    <p class="legal-text">Smart Typist is an AI-powered Android keyboard application that provides the
+                        following core services:</p>
+                    <ul class="legal-list">
+                        <li><strong>Grammar correction:</strong> AI-powered fixing of spelling and grammatical errors
+                        </li>
+                        <li><strong>Tone adjustment:</strong> Text transformation across 8 different tones (Formal,
+                            Casual, Friendly, Concise, Hinglish, Email, Tweet, and more)</li>
+                        <li><strong>Text actions:</strong> Summarization, expansion, and smart reply generation</li>
+                        <li><strong>Keyboard features:</strong> Full QWERTY keyboard with emoji picker and custom themes
+                        </li>
+                    </ul>
+                    <p class="legal-text">We reserve the right to modify, suspend, or discontinue any part of the
+                        Service at any time, with reasonable notice when possible.</p>
+                </div>
+
+                <!-- Section 3: User Accounts -->
+                <div class="legal-section" id="user-accounts">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">👤</div>
+                        <div>
+                            <div class="legal-section-num">Section 3</div>
+                            <h2 class="legal-section-title">User Accounts & Registration</h2>
+                        </div>
+                    </div>
+                    <p class="legal-text">Smart Typist does not require account creation to use the basic keyboard
+                        features. However, for premium subscriptions, the following applies:</p>
+                    <ul class="legal-list">
+                        <li>Subscriptions are managed through your Google Play account</li>
+                        <li>You are responsible for the security of your Google account</li>
+                        <li>You must be at least 13 years old to use Smart Typist (or the minimum age in your country)
+                        </li>
+                        <li>One Google account can hold one active subscription at a time</li>
+                        <li>Sharing subscription credentials with others is not permitted</li>
+                    </ul>
+                </div>
+
+                <!-- Section 4: Subscriptions & Billing -->
+                <div class="legal-section" id="subscriptions">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">💳</div>
+                        <div>
+                            <div class="legal-section-num">Section 4</div>
+                            <h2 class="legal-section-title">Subscriptions & Billing</h2>
+                        </div>
+                    </div>
+
+                    <p class="legal-text">Smart Typist offers the following plans:</p>
+
+                    <div class="plan-comparison">
+                        <div class="plan-card-small">
+                            <h4>Free Plan</h4>
+                            <ul>
+                                <li>• Grammar correction</li>
+                                <li>• Basic tone adjustments</li>
+                                <li>• Emoji picker & themes</li>
+                                <li>• 5 AI calls per day</li>
+                            </ul>
+                        </div>
+                        <div class="plan-card-small">
+                            <h4>Monthly — ₹49/month</h4>
+                            <ul>
+                                <li>• All Free features</li>
+                                <li>• All 8 AI tones</li>
+                                <li>• Email & Tweet modes</li>
+                                <li>• Unlimited AI calls</li>
+                            </ul>
+                        </div>
+                        <div class="plan-card-small">
+                            <h4>Yearly — ₹449/year</h4>
+                            <ul>
+                                <li>• Everything in Monthly</li>
+                                <li>• Priority support</li>
+                                <li>• Early feature access</li>
+                                <li>• Save 24%</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="legal-subheading">Billing Terms</h3>
+                    <ul class="legal-list">
+                        <li>All payments are processed by Google Play Billing — we never handle payment data directly
+                        </li>
+                        <li>Subscriptions auto-renew unless cancelled at least 24 hours before the renewal date</li>
+                        <li>Prices are displayed in Indian Rupees (₹) and may vary by region</li>
+                        <li>We reserve the right to change pricing with at least 30 days' advance notice</li>
+                    </ul>
+
+                    <h3 class="legal-subheading">Cancellation & Refunds</h3>
+                    <ul class="legal-list">
+                        <li>You may cancel your subscription at any time from your Google Play subscriptions page</li>
+                        <li>After cancellation, you retain premium access until the end of the current billing period
+                        </li>
+                        <li>Refunds are governed by Google Play's refund policy; we do not issue direct refunds</li>
+                        <li>For refund issues, contact Google Play support or reach out to us and we will assist</li>
+                    </ul>
+
+                    <div class="legal-highlight">
+                        <strong>No hidden fees:</strong> The price you see is the price you pay. We do not charge for
+                        individual AI calls beyond what's included in your plan.
+                    </div>
+                </div>
+
+                <!-- Section 5: Acceptable Use -->
+                <div class="legal-section" id="acceptable-use">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">🚫</div>
+                        <div>
+                            <div class="legal-section-num">Section 5</div>
+                            <h2 class="legal-section-title">Acceptable Use Policy</h2>
+                        </div>
+                    </div>
+
+                    <p class="legal-text">You agree to use Smart Typist only for lawful purposes and in a way that does
+                        not infringe on the rights of others. You must NOT use Smart Typist to:</p>
+                    <ul class="legal-list">
+                        <li>Generate or transmit spam, phishing messages, or fraudulent communications</li>
+                        <li>Create or distribute hate speech, harassment, or threatening content</li>
+                        <li>Generate content that violates any applicable local, national, or international laws</li>
+                        <li>Attempt to reverse-engineer, decompile, or extract source code from the app</li>
+                        <li>Circumvent, disable, or interfere with security features of the Service</li>
+                        <li>Use the Service to infringe on intellectual property rights of others</li>
+                        <li>Abuse the AI features in ways that violate our AI provider's usage policies</li>
+                        <li>Create multiple accounts to circumvent free tier limitations</li>
+                    </ul>
+
+                    <div class="legal-highlight warning">
+                        <strong>Violation of this policy</strong> may result in immediate suspension of your account and
+                        access to the Service without refund.
+                    </div>
+                </div>
+
+                <!-- Section 6: Intellectual Property -->
+                <div class="legal-section" id="intellectual-property">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">©️</div>
+                        <div>
+                            <div class="legal-section-num">Section 6</div>
+                            <h2 class="legal-section-title">Intellectual Property</h2>
+                        </div>
+                    </div>
+
+                    <h3 class="legal-subheading">Our Rights</h3>
+                    <p class="legal-text">Smart Typist, including its name, logo, design, code, and all associated
+                        content, is owned by Smart Typist and protected by copyright, trademark, and other intellectual
+                        property laws. You may not copy, modify, distribute, or create derivative works based on our app
+                        without explicit written permission.</p>
+
+                    <h3 class="legal-subheading">Your Content</h3>
+                    <p class="legal-text">The text you create using Smart Typist remains yours. We do not claim
+                        ownership over any content you type or the AI-enhanced output you receive. When you submit text
+                        to our AI features, you grant us a limited, temporary license only to process and return that
+                        text to you.</p>
+
+                    <h3 class="legal-subheading">Feedback</h3>
+                    <p class="legal-text">If you provide us with feedback, suggestions, or ideas about the Service, you
+                        grant us the right to use that feedback to improve our products without any obligation to you.
+                    </p>
+                </div>
+
+                <!-- Section 7: AI Features Disclaimer -->
+                <div class="legal-section" id="ai-disclaimer">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">🤖</div>
+                        <div>
+                            <div class="legal-section-num">Section 7</div>
+                            <h2 class="legal-section-title">AI Features Disclaimer</h2>
+                        </div>
+                    </div>
+
+                    <p class="legal-text">Smart Typist uses AI to enhance your text. Please be aware of the following
+                        important limitations:</p>
+                    <ul class="legal-list">
+                        <li>AI outputs may not always be accurate, complete, or appropriate for your specific context
+                        </li>
+                        <li>You are responsible for reviewing and approving any AI-generated or AI-enhanced content
+                            before sending it</li>
+                        <li>Smart Typist should not be used for legal, medical, financial, or safety-critical
+                            communications without human review</li>
+                        <li>AI tone transformations are suggestions, not professional advice</li>
+                        <li>Response quality may vary based on internet connectivity and AI provider availability</li>
+                    </ul>
+
+                    <div class="legal-highlight">
+                        <strong>Always review AI-enhanced content</strong> before sending, especially in professional or
+                        sensitive contexts.
+                    </div>
+                </div>
+
+                <!-- Section 8: Termination -->
+                <div class="legal-section" id="termination">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">🚪</div>
+                        <div>
+                            <div class="legal-section-num">Section 8</div>
+                            <h2 class="legal-section-title">Termination</h2>
+                        </div>
+                    </div>
+
+                    <h3 class="legal-subheading">By You</h3>
+                    <p class="legal-text">You may stop using Smart Typist at any time by uninstalling the app and
+                        cancelling any active subscriptions through Google Play.</p>
+
+                    <h3 class="legal-subheading">By Us</h3>
+                    <p class="legal-text">We reserve the right to suspend or terminate your access to Smart Typist, with
+                        or without notice, if:</p>
+                    <ul class="legal-list">
+                        <li>You violate these Terms or our Acceptable Use Policy</li>
+                        <li>We are required to do so by law</li>
+                        <li>We believe your use poses a security or legal risk to us or others</li>
+                        <li>The Service is discontinued</li>
+                    </ul>
+                    <p class="legal-text">In the event of termination due to our policy violation, you will not be
+                        entitled to a refund of any unused subscription period.</p>
+                </div>
+
+                <!-- Section 9: Warranties & Disclaimers -->
+                <div class="legal-section" id="disclaimers">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">⚠️</div>
+                        <div>
+                            <div class="legal-section-num">Section 9</div>
+                            <h2 class="legal-section-title">Warranties & Disclaimers</h2>
+                        </div>
+                    </div>
+
+                    <p class="legal-text">Smart Typist is provided on an <strong>"as is"</strong> and <strong>"as
+                            available"</strong> basis. To the maximum extent permitted by law:</p>
+                    <ul class="legal-list">
+                        <li>We make no warranties that the Service will be uninterrupted, error-free, or secure</li>
+                        <li>We do not warrant that AI-generated content will be accurate, appropriate, or suit your
+                            needs</li>
+                        <li>We are not responsible for any content you create or send using Smart Typist</li>
+                        <li>We do not guarantee that the app will be compatible with all Android devices or versions
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 10: Limitation of Liability -->
+                <div class="legal-section" id="limitation">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">⚖️</div>
+                        <div>
+                            <div class="legal-section-num">Section 10</div>
+                            <h2 class="legal-section-title">Limitation of Liability</h2>
+                        </div>
+                    </div>
+
+                    <p class="legal-text">To the maximum extent permitted by applicable law, Smart Typist and its
+                        creators shall not be liable for:</p>
+                    <ul class="legal-list">
+                        <li>Any indirect, incidental, special, consequential, or punitive damages</li>
+                        <li>Loss of profits, data, goodwill, or business opportunities</li>
+                        <li>Damages arising from unauthorized access to or alteration of your data</li>
+                        <li>Any third-party conduct or content</li>
+                        <li>Any issues caused by actions you take based on AI-generated suggestions</li>
+                    </ul>
+                    <p class="legal-text">Our total liability to you for any claims arising from your use of Smart
+                        Typist shall not exceed the amount you paid for the Service in the 12 months preceding the
+                        claim.</p>
+                </div>
+
+                <!-- Section 11: Governing Law -->
+                <div class="legal-section" id="governing-law">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">🏛️</div>
+                        <div>
+                            <div class="legal-section-num">Section 11</div>
+                            <h2 class="legal-section-title">Governing Law & Dispute Resolution</h2>
+                        </div>
+                    </div>
+
+                    <p class="legal-text">These Terms are governed by the laws of India. Any disputes arising from these
+                        Terms or your use of Smart Typist shall be resolved as follows:</p>
+                    <ul class="legal-list">
+                        <li><strong>Informal resolution:</strong> We encourage you to contact us first to resolve any
+                            issue informally at <a href="mailto:support@smarttypist.app"
+                                style="color: var(--primary);">support@smarttypist.app</a></li>
+                        <li><strong>Jurisdiction:</strong> Any legal proceedings shall be subject to the exclusive
+                            jurisdiction of courts in India</li>
+                        <li><strong>Arbitration:</strong> For disputes under ₹10,00,000, we prefer resolution through
+                            arbitration before litigation</li>
+                    </ul>
+
+                    <div class="legal-highlight">
+                        <strong>We value every user.</strong> Before escalating any dispute, please reach out to us —
+                        most issues can be resolved quickly and amicably.
+                    </div>
+                </div>
+
+                <!-- Section 12: Contact -->
+                <div class="legal-section" id="contact-terms">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">📬</div>
+                        <div>
+                            <div class="legal-section-num">Section 12</div>
+                            <h2 class="legal-section-title">Contact Us</h2>
+                        </div>
+                    </div>
+
+                    <p class="legal-text">If you have any questions about these Terms of Service, please contact us:</p>
+
+                    <div class="contact-card">
+                        <div class="contact-card-text">
+                            <h3>Legal & Terms Inquiries</h3>
+                            <p>We respond to all inquiries within 24–48 hours</p>
+                        </div>
+                        <a href="mailto:support@smarttypist.app" class="contact-card-email">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            support@smarttypist.app
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Also See -->
+                <div class="other-legal">
+                    <p>🔒 Also see our <strong>Privacy Policy</strong> for information on how we handle your data.</p>
+                    <a href="privacy-policy.html">
+                        Read Privacy Policy
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 Smart Typist. All rights reserved.</p>
+                <p class="footer-made">Made with ❤️ in India</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Management
+        (function () {
+            const savedTheme = localStorage.getItem('theme') || (typeof CONFIG !== 'undefined' ? CONFIG.theme.defaultMode : 'dark');
+            document.documentElement.setAttribute('data-theme', savedTheme);
+
+            const toggle = document.getElementById('theme-toggle');
+            if (toggle) {
+                toggle.addEventListener('click', function () {
+                    const current = document.documentElement.getAttribute('data-theme');
+                    const next = current === 'dark' ? 'light' : 'dark';
+                    document.documentElement.setAttribute('data-theme', next);
+                    localStorage.setItem('theme', next);
+                });
+            }
+        })();
+    </script>
+</body>
+
+</html>

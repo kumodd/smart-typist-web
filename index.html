@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Smart Typist - AI-Powered Android Keyboard</title>
+  <meta name="description" id="page-description"
+    content="Transform your typing with AI. Grammar correction, tone adjustment, email formatting, and Hinglish support.">
+  <meta name="keywords" id="page-keywords"
+    content="AI keyboard, Android keyboard, grammar correction, Hinglish keyboard, smart keyboard">
+
+  <!-- OpenGraph Meta -->
+  <meta property="og:title" id="og-title" content="Smart Typist - AI-Powered Android Keyboard">
+  <meta property="og:description" id="og-description" content="Transform your typing with AI">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" id="twitter-title" content="Smart Typist">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⌨️</text></svg>">
+
+  <!-- Config - MUST load before scripts -->
+  <script src="config.js"></script>
+</head>
+
+<body>
+  <!-- Announcement Bar -->
+  <div class="announcement-bar" id="announcement-bar">
+    <div class="container announcement-content">
+      <span id="announcement-text">🎉 Now Available!</span>
+      <a href="#" id="announcement-link" class="announcement-link">Download Now →</a>
+    </div>
+    <button class="announcement-close" id="announcement-close" aria-label="Close">×</button>
+  </div>
+
+  <!-- Theme Toggle -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+    <span class="theme-icon-dark">🌙</span>
+    <span class="theme-icon-light">☀️</span>
+  </button>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon" id="logo-icon">⌨️</span>
+        <span class="logo-text" id="nav-app-name">Smart Typist</span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#ai-modes" class="nav-link">AI Modes</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+        <li><a href="#download" class="nav-link nav-cta">Download</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-particles" id="hero-particles"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="hero-badge" id="hero-badge">🚀 AI-Powered Keyboard</span>
+        <h1 class="hero-title" id="hero-title">Type Smarter, <span class="gradient-text">Not Harder</span></h1>
+        <p class="hero-subtitle" id="hero-subtitle">Transform your typing with AI that understands context, fixes
+          grammar, and adapts to your tone — all in real-time.</p>
+        <div class="hero-typing" id="hero-typing">
+          <span class="typing-label">I can help you</span>
+          <span class="typing-text" id="typing-text"></span>
+          <span class="typing-cursor">|</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#download" class="btn btn-primary btn-lg pulse-glow" id="hero-cta-primary">
+            <span>Download APK</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+          </a>
+          <a href="#features" class="btn btn-secondary btn-lg" id="hero-cta-secondary">View Features</a>
+        </div>
+        <div class="hero-stats" id="hero-stats">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="phone-mockup">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="phone-status-bar">
+              <span>9:41</span>
+              <div class="phone-status-icons">
+                <span>📶</span>
+                <span>🔋</span>
+              </div>
+            </div>
+            <div class="phone-message-area">
+              <div class="message-bubble incoming">Hey, can you send me that report?</div>
+              <div class="message-bubble outgoing" id="demo-message">
+                <span class="demo-original">i wil send it tomorow</span>
+                <span class="demo-arrow">→</span>
+                <span class="demo-enhanced">I will send it tomorrow.</span>
+              </div>
+            </div>
+            <div class="keyboard-preview">
+              <div class="keyboard-header">
+                <div class="ai-buttons">
+                  <button class="ai-btn active">✓ Grammar</button>
+                  <button class="ai-btn">💼 Formal</button>
+                  <button class="ai-btn">💬 Casual</button>
+                  <button class="ai-btn">📧 Email</button>
+                </div>
+              </div>
+              <div class="keyboard-keys">
+                <div class="key-row">
+                  <span class="key">Q</span><span class="key">W</span><span class="key">E</span><span
+                    class="key">R</span><span class="key">T</span><span class="key">Y</span><span
+                    class="key">U</span><span class="key">I</span><span class="key">O</span><span class="key">P</span>
+                </div>
+                <div class="key-row">
+                  <span class="key">A</span><span class="key">S</span><span class="key">D</span><span
+                    class="key">F</span><span class="key">G</span><span class="key">H</span><span
+                    class="key">J</span><span class="key">K</span><span class="key">L</span>
+                </div>
+                <div class="key-row">
+                  <span class="key key-shift">⇧</span><span class="key">Z</span><span class="key">X</span><span
+                    class="key">C</span><span class="key">V</span><span class="key">B</span><span
+                    class="key">N</span><span class="key">M</span><span class="key key-backspace">⌫</span>
+                </div>
+                <div class="key-row">
+                  <span class="key key-emoji">😀</span><span class="key key-space"></span><span
+                    class="key key-enter">↵</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="floating-badges">
+          <span class="float-badge badge-1">✓ Grammar Fixed</span>
+          <span class="float-badge badge-2">💼 Made Formal</span>
+          <span class="float-badge badge-3">🇮🇳 Hinglish</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll to explore</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M19 12l-7 7-7-7" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- Trust Badges Section -->
+  <section class="section trust-badges" id="trust-badges">
+    <div class="container">
+      <div class="trust-grid" id="trust-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Features</span>
+        <h2 class="section-title" id="features-title">Everything You Need to <span class="gradient-text">Type
+            Better</span></h2>
+        <p class="section-subtitle" id="features-subtitle">Powerful AI features for everyday typing, accessible right
+          from your keyboard.</p>
+      </div>
+      <div class="features-grid" id="features-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Modes Demo Section -->
+  <section class="section ai-modes" id="ai-modes">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">AI Modes</span>
+        <h2 class="section-title" id="ai-modes-title">See the <span class="gradient-text">AI Magic</span> in Action</h2>
+        <p class="section-subtitle" id="ai-modes-subtitle">Watch how Smart Typist transforms your text with a single
+          tap.</p>
+      </div>
+      <div class="ai-modes-container">
+        <div class="ai-modes-tabs" id="ai-modes-tabs">
+          <!-- Populated by JS -->
+        </div>
+        <div class="ai-modes-demo" id="ai-modes-demo">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Section -->
+  <section class="section comparison" id="comparison">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Compare</span>
+        <h2 class="section-title" id="comparison-title">Why Choose <span class="gradient-text">Smart Typist?</span></h2>
+        <p class="section-subtitle" id="comparison-subtitle">See how we compare to other keyboards</p>
+      </div>
+      <div class="comparison-table-wrapper">
+        <table class="comparison-table" id="comparison-table">
+          <!-- Populated by JS -->
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="section how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Simple Setup</span>
+        <h2 class="section-title" id="steps-title">Get Started in <span class="gradient-text">4 Steps</span></h2>
+        <p class="section-subtitle" id="steps-subtitle">From download to enhanced typing in under 2 minutes.</p>
+      </div>
+      <div class="steps-grid" id="steps-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="section pricing" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Pricing</span>
+        <h2 class="section-title" id="pricing-title">Simple, <span class="gradient-text">Transparent</span> Pricing</h2>
+        <p class="section-subtitle" id="pricing-subtitle">Start free. Upgrade when you need more power.</p>
+      </div>
+      <div class="pricing-grid" id="pricing-grid">
+        <!-- Populated by JS -->
+      </div>
+      <p class="pricing-note" id="pricing-note">* Pro is a one-time purchase. No subscriptions, no hidden fees.</p>
+    </div>
+  </section>
+
+  <!-- Upcoming Features Section -->
+  <section class="section roadmap" id="roadmap">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Roadmap</span>
+        <h2 class="section-title" id="roadmap-title">What's <span class="gradient-text">Coming Next</span></h2>
+        <p class="section-subtitle" id="roadmap-subtitle">We're constantly improving. Here's what's on the horizon.</p>
+      </div>
+      <div class="roadmap-grid" id="roadmap-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Reviews</span>
+        <h2 class="section-title" id="testimonials-title">Loved by <span class="gradient-text">Users</span></h2>
+        <p class="section-subtitle" id="testimonials-subtitle">See what people are saying about Smart Typist.</p>
+      </div>
+      <div class="testimonials-grid" id="testimonials-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">FAQ</span>
+        <h2 class="section-title" id="faq-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+        <p class="section-subtitle" id="faq-subtitle">Got questions? We've got answers.</p>
+      </div>
+      <div class="faq-list" id="faq-list">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="section newsletter" id="newsletter">
+    <div class="container">
+      <div class="newsletter-card">
+        <div class="newsletter-content">
+          <h2 class="newsletter-title" id="newsletter-title">Stay Updated</h2>
+          <p class="newsletter-subtitle" id="newsletter-subtitle">Get notified about new features and updates</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" class="newsletter-input" id="newsletter-email" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-primary" id="newsletter-btn">Subscribe</button>
+          </form>
+          <p class="newsletter-note" id="newsletter-note">No spam. Unsubscribe anytime.</p>
+        </div>
+        <div class="newsletter-visual">
+          <span class="newsletter-emoji">📬</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download CTA Section -->
+  <section class="section download-cta" id="download">
+    <div class="container">
+      <div class="download-card">
+        <div class="download-glow"></div>
+        <div class="download-content">
+          <h2 class="download-title" id="download-title">Ready to <span class="gradient-text">Type Smarter?</span></h2>
+          <p class="download-subtitle" id="download-description">Download Smart Typist now and transform your Android
+            typing experience with AI.</p>
+          <div class="download-buttons">
+            <a href="#" class="btn btn-primary btn-lg download-btn-main" id="download-apk-btn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.523 15.342c-.392 0-.774-.034-1.162-.1l-1.755 3.04c2.092.607 4.327.59 6.41-.04l-1.73-2.997a7.71 7.71 0 0 1-1.763.097zm-5.275-.16a7.587 7.587 0 0 1-.928-.728l-1.73 2.996c1.554 1.34 3.476 2.127 5.532 2.298l1.754-3.04a7.685 7.685 0 0 1-4.628-1.526zm-3.082-4.88a7.68 7.68 0 0 1 .157-1.568L5.83 5.736A10.69 10.69 0 0 0 5.05 12c0 2.185.658 4.218 1.78 5.922l3.493-2.012a7.594 7.594 0 0 1-1.157-5.608zM12 4.305c1.474 0 2.86.406 4.043 1.117l1.73-2.996A10.617 10.617 0 0 0 12 .75c-2.418 0-4.642.812-6.43 2.177l1.73 2.996A7.603 7.603 0 0 1 12 4.305zm7.166 1.69l-3.493 2.012a7.64 7.64 0 0 1 1.157 5.608A7.68 7.68 0 0 1 16.674 15l3.493 2.012A10.658 10.658 0 0 0 21.95 12c0-2.302-.733-4.433-1.973-6.18l-.81.175z" />
+              </svg>
+              <span id="download-apk-text">Download APK</span>
+            </a>
+            <a href="#" class="btn btn-outline btn-lg" id="download-playstore-btn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 010 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 9.99l-2.302 2.303-8.635-8.635z" />
+              </svg>
+              <span id="download-playstore-text">Coming to Play Store</span>
+            </a>
+          </div>
+          <p class="download-version" id="download-version">Version 1.5.0 • Android 7.0+</p>
+        </div>
+        <div class="download-visual">
+          <div class="floating-icons">
+            <span class="float-icon">✓</span>
+            <span class="float-icon">💼</span>
+            <span class="float-icon">📧</span>
+            <span class="float-icon">🐦</span>
+            <span class="float-icon">🤗</span>
+            <span class="float-icon">🇮🇳</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            <span class="logo-icon" id="footer-logo-icon">⌨️</span>
+            <span class="logo-text" id="footer-app-name">Smart Typist</span>
+          </a>
+          <p class="footer-tagline" id="footer-tagline">AI-powered keyboard for Android</p>
+          <div class="footer-social" id="footer-social">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#ai-modes">AI Modes</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#roadmap">Roadmap</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#" id="footer-email">Contact</a></li>
+              <li><a href="privacy-policy.html" id="footer-privacy">Privacy Policy</a></li>
+              <li><a href="terms.html" id="footer-terms">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright" id="footer-copyright">© 2026 Smart Typist. All rights reserved.</p>
+        <p class="footer-made" id="footer-made">Made with ❤️ in India</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="scripts.js"></script>
+</body>
+
+</html>

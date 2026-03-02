@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Smart Typist</title>
+    <meta name="description"
+        content="Privacy Policy for Smart Typist - AI-Powered Android Keyboard. Learn how we protect your data and privacy.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⌨️</text></svg>">
+
+    <style>
+        /* Legal Page Specific Styles */
+        .legal-hero {
+            padding: 160px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .legal-hero-bg {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(108, 92, 231, 0.12) 0%, transparent 60%),
+                radial-gradient(circle at 80% 30%, rgba(0, 206, 201, 0.08) 0%, transparent 50%);
+        }
+
+        .legal-hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(108, 92, 231, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(108, 92, 231, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .legal-hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .legal-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 9999px;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .legal-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .legal-meta {
+            font-size: 0.875rem;
+            color: var(--text-tertiary);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .legal-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Table of Contents */
+        .toc-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .toc-title {
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            margin-bottom: 1rem;
+        }
+
+        .toc-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 0.5rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .toc-list li a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            padding: 6px 8px;
+            border-radius: 0.5rem;
+            transition: all 0.15s ease;
+        }
+
+        .toc-list li a:hover {
+            background: var(--bg-tertiary);
+            color: var(--primary);
+        }
+
+        .toc-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            background: var(--gradient-primary);
+            color: white;
+            font-size: 0.6875rem;
+            font-weight: 700;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* Legal Content */
+        .legal-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding-bottom: 5rem;
+        }
+
+        .legal-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 2rem;
+            scroll-margin-top: 100px;
+            backdrop-filter: blur(10px);
+            transition: border-color 0.3s ease;
+        }
+
+        .legal-section:hover {
+            border-color: var(--border-hover);
+        }
+
+        .legal-section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .legal-section-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background: var(--gradient-card);
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .legal-section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .legal-section-num {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .legal-text {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .legal-text:last-child {
+            margin-bottom: 0;
+        }
+
+        .legal-list {
+            list-style: none;
+            padding: 0;
+            margin: 0.75rem 0 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .legal-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .legal-list li::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: var(--primary);
+            border-radius: 50%;
+            margin-top: 8px;
+            flex-shrink: 0;
+        }
+
+        .legal-highlight {
+            background: linear-gradient(135deg, rgba(108, 92, 231, 0.08) 0%, rgba(0, 206, 201, 0.08) 100%);
+            border: 1px solid rgba(108, 92, 231, 0.2);
+            border-radius: 0.75rem;
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .legal-highlight strong {
+            color: var(--primary);
+        }
+
+        .legal-subheading {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 1.25rem 0 0.5rem;
+        }
+
+        /* Contact Card */
+        .contact-card {
+            background: var(--gradient-card);
+            border: 1px solid rgba(108, 92, 231, 0.25);
+            border-radius: 1rem;
+            padding: 1.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-card-text h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-card-text p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .contact-card-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--primary);
+            color: white;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: all 0.15s ease;
+        }
+
+        .contact-card-email:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        /* Back to Home */
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            transition: color 0.15s ease;
+        }
+
+        .back-home:hover {
+            color: var(--primary);
+        }
+
+        /* Other Legal Links */
+        .other-legal {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .other-legal p {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+        }
+
+        .other-legal a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: opacity 0.15s ease;
+        }
+
+        .other-legal a:hover {
+            opacity: 0.8;
+        }
+    </style>
+
+    <!-- Config - MUST load before scripts -->
+    <script src="config.js"></script>
+</head>
+
+<body>
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <span class="theme-icon-dark">🌙</span>
+        <span class="theme-icon-light">☀️</span>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">⌨️</span>
+                <span class="logo-text">Smart Typist</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html#features" class="nav-link">Features</a></li>
+                <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+                <li><a href="index.html#download" class="nav-link nav-cta">Download</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="legal-hero">
+        <div class="legal-hero-bg"></div>
+        <div class="legal-hero-grid"></div>
+        <div class="container legal-hero-content">
+            <a href="index.html" class="back-home">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 5l-7 7 7 7" />
+                </svg>
+                Back to Home
+            </a>
+            <div class="legal-badge">
+                <span>🔒</span>
+                <span>Legal Document</span>
+            </div>
+            <h1 class="legal-title">Privacy <span class="gradient-text">Policy</span></h1>
+            <div class="legal-meta">
+                <div class="legal-meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                        <line x1="16" y1="2" x2="16" y2="6" />
+                        <line x1="8" y1="2" x2="8" y2="6" />
+                        <line x1="3" y1="10" x2="21" y2="10" />
+                    </svg>
+                    <span>Last Updated: March 2, 2026</span>
+                </div>
+                <div class="legal-meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                    <span>Effective: March 2, 2026</span>
+                </div>
+                <div class="legal-meta-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <span>Applies to: Smart Typist Android App & Website</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+
+            <!-- Table of Contents -->
+            <div class="toc-card">
+                <p class="toc-title">📋 Table of Contents</p>
+                <ul class="toc-list">
+                    <li><a href="#information-we-collect"><span class="toc-num">1</span> Information We Collect</a></li>
+                    <li><a href="#how-we-use"><span class="toc-num">2</span> How We Use Information</a></li>
+                    <li><a href="#data-sharing"><span class="toc-num">3</span> Data Sharing</a></li>
+                    <li><a href="#data-security"><span class="toc-num">4</span> Data Security</a></li>
+                    <li><a href="#accessibility"><span class="toc-num">5</span> Accessibility Service</a></li>
+                    <li><a href="#ai-processing"><span class="toc-num">6</span> AI Text Processing</a></li>
+                    <li><a href="#third-party"><span class="toc-num">7</span> Third-Party Services</a></li>
+                    <li><a href="#children"><span class="toc-num">8</span> Children's Privacy</a></li>
+                    <li><a href="#your-rights"><span class="toc-num">9</span> Your Rights</a></li>
+                    <li><a href="#changes"><span class="toc-num">10</span> Changes to Policy</a></li>
+                    <li><a href="#contact-privacy"><span class="toc-num">11</span> Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Introduction Highlight -->
+            <div class="legal-highlight" style="margin-bottom: 2rem;">
+                <strong>Privacy-First Commitment:</strong> Smart Typist is built with your privacy as the top priority.
+                We do
+                <strong>not</strong> store what you type, sell your data, or track your keystrokes. This policy explains
+                transparently what limited data we do collect and why.
+            </div>
+
+            <!-- Sections -->
+            <div class="legal-layout">
+
+                <!-- Section 1: Information We Collect -->
+                <div class="legal-section" id="information-we-collect">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">📊</div>
+                        <div>
+                            <div class="legal-section-num">Section 1</div>
+                            <h2 class="legal-section-title">Information We Collect</h2>
+                        </div>
+                    </div>
+
+                    <p class="legal-text">We collect the minimum data necessary to provide and improve Smart Typist.
+                        Here is exactly what we collect and why:</p>
+
+                    <h3 class="legal-subheading">1.1 What We Do NOT Collect</h3>
+                    <ul class="legal-list">
+                        <li>Your keystrokes or typed text (we never log what you type)</li>
+                        <li>Passwords, credit card numbers, or any sensitive personal data</li>
+                        <li>Your location or GPS data</li>
+                        <li>Contact lists, messages, or media files</li>
+                        <li>Personally identifiable information without your explicit consent</li>
+                    </ul>
+
+                    <h3 class="legal-subheading">1.2 What We May Collect</h3>
+                    <ul class="legal-list">
+                        <li><strong>Device information:</strong> Android version, device model (to fix compatibility
+                            issues)</li>
+                        <li><strong>App usage stats:</strong> Feature usage counts, crash reports (anonymized)</li>
+                        <li><strong>Subscription information:</strong> Purchase status via Google Play (not payment
+                            details)</li>
+                        <li><strong>Email address:</strong> Only if you subscribe to our newsletter or contact support
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Section 2: How We Use Information -->
+                <div class="legal-section" id="how-we-use">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">⚙️</div>
+                        <div>
+                            <div class="legal-section-num">Section 2</div>
+                            <h2 class="legal-section-title">How We Use Your Information</h2>
+                        </div>
+                    </div>
+
+                    <p class="legal-text">Any information we collect is used solely for the following purposes:</p>
+                    <ul class="legal-list">
+                        <li>To provide and maintain the Smart Typist keyboard app</li>
+                        <li>To process AI text transformations you explicitly request</li>
+                        <li>To manage your subscription and unlock premium features</li>
+                        <li>To fix bugs and improve app performance using crash reports</li>
+                        <li>To respond to your support requests and inquiries</li>
+                        <li>To send product updates if you have subscribed (you can unsubscribe anytime)</li>
+                    </ul>
+
+                    <div class="legal-highlight">
+                        <strong>We never use your data for advertising, profiling, or selling to third parties.</strong>
+                    </div>
+                </div>
+
+                <!-- Section 3: Data Sharing -->
+                <div class="legal-section" id="data-sharing">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">🤝</div>
+                        <div>
+                            <div class="legal-section-num">Section 3</div>
+                            <h2 class="legal-section-title">Data Sharing & Disclosure</h2>
+                        </div>
+                    </div>
+
+                    <p class="legal-text">We do not sell, trade, or rent your personal information to third parties. We
+                        may share limited, anonymized data in these situations:</p>
+                    <ul class="legal-list">
+                        <li><strong>Service providers:</strong> Trusted providers like Google Play Billing (for
+                            subscriptions), Firebase (for crash analytics), and AI API providers for text processing —
+                            all under strict confidentiality agreements</li>
+                        <li><strong>Legal compliance:</strong> When required by law, court order, or to protect the
+                            rights and safety of Smart Typist and its users</li>
+                        <li><strong>Business transfer:</strong> In the event of a merger or acquisition, your
+                            information may transfer, subject to the same privacy protections</li>
+                    </ul>
+                </div>
+
+                <!-- Section 4: Data Security -->
+                <div class="legal-section" id="data-security">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">🛡️</div>
+                        <div>
+                            <div class="legal-section-num">Section 4</div>
+                            <h2 class="legal-section-title">Data Security</h2>
+                        </div>
+                    </div>
+
+                    <p class="legal-text">We take data security seriously and employ industry-standard protections:</p>
+                    <ul class="legal-list">
+                        <li><strong>Encryption in transit:</strong> All data sent to our AI providers is encrypted via
+                            HTTPS/TLS</li>
+                        <li><strong>No persistent storage:</strong> Text submitted for AI processing is not stored on
+                            our servers after the response is returned</li>
+                        <li><strong>Secure API keys:</strong> Our API credentials are stored securely and never exposed
+                            client-side</li>
+                        <li><strong>Google Play security:</strong> All payment processing is handled by Google Play
+                            Billing — we never handle your payment information</li>
+                    </ul>
+                    <p class="legal-text">While we implement strong security measures, no system is 100% secure. If you
+                        discover a security vulnerability, please contact us at <a href="mailto:support@smarttypist.app"
+                            style="color: var(--primary);">support@smarttypist.app</a>.</p>
+                </div>
+
+                <!-- Section 5: Accessibility Service -->
+                <div class="legal-section" id="accessibility">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">♿</div>
+                        <div>
+                            <div class="legal-section-num">Section 5</div>
+                            <h2 class="legal-section-title">Keyboard & Accessibility Service Usage</h2>
+                        </div>
+                    </div>
+
+                    <div class="legal-highlight">
+                        <strong>Critical Disclosure:</strong> Smart Typist operates as an Android Input Method Editor
+                        (IME). As a keyboard app, it technically has access to the text you type in the fields where it
+                        is active.
+                    </div>
+
+                    <p class="legal-text">Here is our commitment regarding this access:</p>
+                    <ul class="legal-list">
+                        <li>We only process text when you <strong>explicitly tap an AI button</strong> (Grammar Fix,
+                            Formal, Casual, etc.)</li>
+                        <li>We <strong>never log, save, or transmit</strong> text typed in normal usage — only when you
+                            actively request AI enhancement</li>
+                        <li>Smart Typist <strong>automatically disables AI features</strong> in sensitive fields like
+                            passwords, credit cards, and email addresses</li>
+                        <li>AI processing is done on-demand; results are displayed to you and not retained on our
+                            servers</li>
+                    </ul>
+                </div>
+
+                <!-- Section 6: AI Text Processing -->
+                <div class="legal-section" id="ai-processing">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">🤖</div>
+                        <div>
+                            <div class="legal-section-num">Section 6</div>
+                            <h2 class="legal-section-title">AI Text Processing</h2>
+                        </div>
+                    </div>
+
+                    <p class="legal-text">When you use Smart Typist's AI features (Grammar Fix, Tone changes, Email
+                        mode, etc.), the text you select is sent to an AI service for processing. Here's how it works:
+                    </p>
+
+                    <h3 class="legal-subheading">Request Flow</h3>
+                    <ul class="legal-list">
+                        <li>You type text and tap an AI mode button</li>
+                        <li>Only the selected text is sent (not your entire chat history or context)</li>
+                        <li>Text is encrypted and sent to our AI provider via HTTPS</li>
+                        <li>The enhanced text is returned to your keyboard</li>
+                        <li>The original text and result are not stored on any server</li>
+                    </ul>
+
+                    <h3 class="legal-subheading">AI Provider</h3>
+                    <p class="legal-text">We use industry-standard AI APIs for text processing. These providers may have
+                        their own data retention policies. We use API settings that minimize data retention wherever
+                        possible. For sensitive use cases, we recommend reviewing the privacy practices of the AI
+                        provider.</p>
+                </div>
+
+                <!-- Section 7: Third-Party Services -->
+                <div class="legal-section" id="third-party">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">🔗</div>
+                        <div>
+                            <div class="legal-section-num">Section 7</div>
+                            <h2 class="legal-section-title">Third-Party Services</h2>
+                        </div>
+                    </div>
+
+                    <p class="legal-text">Smart Typist integrates with the following third-party services, each with
+                        their own privacy policies:</p>
+                    <ul class="legal-list">
+                        <li><strong>Google Play Billing:</strong> For subscription and purchase management — <a
+                                href="https://policies.google.com/privacy" target="_blank" rel="noopener"
+                                style="color: var(--primary);">Google Privacy Policy</a></li>
+                        <li><strong>Firebase (Google):</strong> Used for app analytics and crash reporting (anonymized)
+                            — <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener"
+                                style="color: var(--primary);">Firebase Privacy Policy</a></li>
+                        <li><strong>AI API Provider:</strong> For processing text enhancement requests — data is
+                            minimized and not retained</li>
+                    </ul>
+                    <p class="legal-text">We encourage you to review the privacy policies of these third-party providers
+                        for more information about their data practices.</p>
+                </div>
+
+                <!-- Section 8: Children's Privacy -->
+                <div class="legal-section" id="children">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">👶</div>
+                        <div>
+                            <div class="legal-section-num">Section 8</div>
+                            <h2 class="legal-section-title">Children's Privacy</h2>
+                        </div>
+                    </div>
+
+                    <p class="legal-text">Smart Typist is not directed at children under the age of 13. We do not
+                        knowingly collect personal information from children under 13. If you are a parent or guardian
+                        and believe your child has provided us with personal information, please contact us at <a
+                            href="mailto:support@smarttypist.app"
+                            style="color: var(--primary);">support@smarttypist.app</a> and we will promptly delete such
+                        information.</p>
+                </div>
+
+                <!-- Section 9: Your Rights -->
+                <div class="legal-section" id="your-rights">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">⚖️</div>
+                        <div>
+                            <div class="legal-section-num">Section 9</div>
+                            <h2 class="legal-section-title">Your Rights</h2>
+                        </div>
+                    </div>
+
+                    <p class="legal-text">Depending on your location, you may have the following rights regarding your
+                        personal data:</p>
+                    <ul class="legal-list">
+                        <li><strong>Access:</strong> Request a copy of the personal information we hold about you</li>
+                        <li><strong>Correction:</strong> Request correction of inaccurate or incomplete data</li>
+                        <li><strong>Deletion:</strong> Request deletion of your personal data ("right to be forgotten")
+                        </li>
+                        <li><strong>Portability:</strong> Receive your data in a structured, machine-readable format
+                        </li>
+                        <li><strong>Opt-out:</strong> Unsubscribe from marketing communications at any time</li>
+                        <li><strong>Withdraw consent:</strong> Revoke permissions you have previously granted</li>
+                    </ul>
+                    <p class="legal-text">To exercise any of these rights, please contact us at <a
+                            href="mailto:support@smarttypist.app"
+                            style="color: var(--primary);">support@smarttypist.app</a>. We will respond within 30 days.
+                    </p>
+                </div>
+
+                <!-- Section 10: Changes -->
+                <div class="legal-section" id="changes">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">📝</div>
+                        <div>
+                            <div class="legal-section-num">Section 10</div>
+                            <h2 class="legal-section-title">Changes to This Policy</h2>
+                        </div>
+                    </div>
+
+                    <p class="legal-text">We may update this Privacy Policy from time to time. When we make changes, we
+                        will:</p>
+                    <ul class="legal-list">
+                        <li>Update the "Last Updated" date at the top of this policy</li>
+                        <li>Notify you through the app for significant changes</li>
+                        <li>Send an email notification if you are subscribed to our newsletter</li>
+                    </ul>
+                    <p class="legal-text">Continued use of Smart Typist after policy changes constitutes acceptance of
+                        the updated policy. We encourage you to review this policy periodically.</p>
+                </div>
+
+                <!-- Section 11: Contact -->
+                <div class="legal-section" id="contact-privacy">
+                    <div class="legal-section-header">
+                        <div class="legal-section-icon">📬</div>
+                        <div>
+                            <div class="legal-section-num">Section 11</div>
+                            <h2 class="legal-section-title">Contact Us</h2>
+                        </div>
+                    </div>
+
+                    <p class="legal-text">If you have any questions, concerns, or requests regarding this Privacy Policy
+                        or our data practices, please reach out to us:</p>
+
+                    <div class="contact-card">
+                        <div class="contact-card-text">
+                            <h3>Privacy & Data Requests</h3>
+                            <p>Our team typically responds within 24–48 hours</p>
+                        </div>
+                        <a href="mailto:support@smarttypist.app" class="contact-card-email">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            support@smarttypist.app
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Also See -->
+                <div class="other-legal">
+                    <p>📄 Also see our <strong>Terms of Service</strong> for usage rules and limitations.</p>
+                    <a href="terms.html">
+                        Read Terms of Service
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 Smart Typist. All rights reserved.</p>
+                <p class="footer-made">Made with ❤️ in India</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Management
+        (function () {
+            const savedTheme = localStorage.getItem('theme') || (typeof CONFIG !== 'undefined' ? CONFIG.theme.defaultMode : 'dark');
+            document.documentElement.setAttribute('data-theme', savedTheme);
+
+            const toggle = document.getElementById('theme-toggle');
+            if (toggle) {
+                toggle.addEventListener('click', function () {
+                    const current = document.documentElement.getAttribute('data-theme');
+                    const next = current === 'dark' ? 'light' : 'dark';
+                    document.documentElement.setAttribute('data-theme', next);
+                    localStorage.setItem('theme', next);
+                });
+            }
+        })();
+    </script>
+</body>
+
+</html>
