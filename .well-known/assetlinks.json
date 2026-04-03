@@ -1,0 +1,11 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.smarttypist",
+    "sha256_cert_fingerprints": [
+      "95:0B:45:B1:F6:DE:39:27:E9:DE:F0:AD:47:25:50:B3:55:AA:1F:2F:F0:F0:1E:21:7E:3F:68:09:F6:C4:CC:4D",
+      "02:F8:9B:51:EC:18:D2:C7:76:18:D6:4D:DA:0F:3C:6A:59:26:F7:D3:C1:8B:F2:22:5B:48:EB:81:2D:20:79:F8"
+    ]
+  }
+}]
